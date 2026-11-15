@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Talent Bridge</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#17233d}
+header{background:#101d35;color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:bold}
+nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}
+button{cursor:pointer;border:0;border-radius:9px;padding:12px 17px;font-weight:bold}
+.lang{background:#263b5c;color:white}
+.hero{text-align:center;padding:75px 20px;background:linear-gradient(135deg,#102342,#245c91);color:white}
+.hero h1{font-size:38px;max-width:750px;margin:10px auto;line-height:1.2}
+.hero p{font-size:17px;line-height:1.7;max-width:650px;margin:20px auto;color:#e0eaf8}
+.primary{background:#f3b84b;color:#14213a;margin:7px}
+.secondary{background:white;color:#17385d;margin:7px}
+section{padding:45px 7%;text-align:center}
+h2{font-size:28px}
+.intro{color:#64748b;line-height:1.7;max-width:680px;margin:12px auto 30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1000px;margin:auto}
+.card{background:white;padding:25px;border-radius:15px;box-shadow:0 5px 22px #182b4610;text-align:left}
+.card h3{color:#17385d}
+.card p{color:#64748b;line-height:1.6}
+.icon{font-size:30px}
+.join{background:#eaf1fa}
+footer{background:#101d35;color:#dce6f5;text-align:center;padding:28px 15px;line-height:1.8}
+[dir="rtl"]{text-align:right}
+[dir="rtl"] .card{text-align:right}
+@media(max-width:600px){
+.hero h1{font-size:30px}
+nav{width:100%}
+nav a{margin:0 5px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🌍 Global Talent Bridge</div>
+<nav>
+<a href="#about" data-en="About" data-ar="عن المشروع">About</a>
+<a href="#opportunities" data-en="Opportunities" data-ar="الفرص">Opportunities</a>
+<a href="#join" data-en="Join us" data-ar="انضم إلينا">Join us</a>
+</nav>
+<button class="lang" onclick="toggleLanguage()">العربية / EN</button>
+</header>
+
+<div class="hero">
+<h1 data-en="Your Talent Deserves a Global Opportunity"
+data-ar="موهبتك تستحق فرصة عالمية">
+Your Talent Deserves a Global Opportunity
+</h1>
+<p data-en="Discover your abilities, develop your skills, and connect with opportunities around the world — whatever your educational background."
+data-ar="اكتشف قدراتك، طوّر مهاراتك، وتواصل مع فرص حول العالم، مهما كان مستواك التعليمي.">
+Discover your abilities, develop your skills, and connect with opportunities around the world — whatever your educational background.
+</p>
+<button class="primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})" data-en="Discover opportunities" data-ar="اكتشف الفرص">Discover opportunities</button>
+<button class="secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" data-en="Learn more" data-ar="اعرف المزيد">Learn more</button>
+</div>
+
+<section id="about">
+<h2 data-en="What is Global Talent Bridge?" data-ar="ما هو الجسر العالمي للمواهب؟">What is Global Talent Bridge?</h2>
+<p class="intro" data-en="A proposed platform that uses AI-guided discovery and practical projects to help people demonstrate their abilities and connect with organizations offering opportunities."
+data-ar="منصة مقترحة تستخدم الذكاء الاصطناعي لاكتشاف القدرات وتطويرها عبر مشاريع عملية، ومساعدة الناس على التواصل مع المؤسسات التي تقدم الفرص.">
+A proposed platform that uses AI-guided discovery and practical projects to help people demonstrate their abilities and connect with organizations offering opportunities.
+</p>
+</section>
+
+<section id="opportunities">
+<h2 data-en="Opportunities for everyone" data-ar="فرص للجميع">Opportunities for everyone</h2>
+<div class="cards">
+<div class="card">
+<div class="icon">💼</div>
+<h3 data-en="Employment" data-ar="العمل والتوظيف">Employment</h3>
+<p data-en="Connect with employers and discover roles that match your demonstrated skills."
+data-ar="تواصل مع أصحاب العمل واكتشف الوظائف المناسبة لمهاراتك المثبتة.">Connect with employers and discover roles that match your demonstrated skills.</p>
+</div>
+<div class="card">
+<div class="icon">🎓</div>
+<h3 data-en="Education" data-ar="التعليم والمنح">Education</h3>
+<p data-en="Explore learning programs, scholarships, and opportunities to grow."
+data-ar="اكتشف برامج التعلم والمنح وفرص تطوير قدراتك.">Explore learning programs, scholarships, and opportunities to grow.</p>
+</div>
+<div class="card">
+<div class="icon">🚀</div>
+<h3 data-en="Innovation" data-ar="الابتكار والمشاريع">Innovation</h3>
+<p data-en="Develop ideas and connect with mentors, incubators, and potential partners."
+data-ar="طوّر أفكارك وتواصل مع الموجهين وحاضنات الأعمال والشركاء المحتملين.">Develop ideas and connect with mentors, incubators, and potential partners.</p>
+</div>
+</div>
+</section>
+
+<section class="join" id="join">
+<h2 data-en="Every journey starts with an opportunity"
+data-ar="كل رحلة تبدأ بفرصة">
+Every journey starts with an opportunity
+</h2>
+<p class="intro" data-en="Whether you are looking for talent or hoping to develop your own abilities, you belong here."
+data-ar="سواء كنت تبحث عن المواهب أو تريد تطوير قدراتك، مكانك معنا.">
+Whether you are looking for talent or hoping to develop your own abilities, you belong here.
+</p>
+<button class="primary" onclick="alert(language==='en'?'Registration will be available in a future version.':'سيكون التسجيل متاحاً في نسخة قادمة.')" data-en="I'm a talent" data-ar="أنا أبحث عن فرصة">I'm a talent</button>
+<button class="secondary" onclick="alert(language==='en'?'Institution registration will be available in a future version.':'تسجيل المؤسسات سيكون متاحاً في نسخة قادمة.')" data-en="I'm an organization" data-ar="أنا أمثل مؤسسة">I'm an organization</button>
+</section>
+
+<footer>
+<strong>Global Talent Bridge</strong><br>
+<span data-en="Connecting people, skills, and opportunities worldwide."
+data-ar="نربط الناس والمهارات والفرص حول العالم.">Connecting people, skills, and opportunities worldwide.</span>
+<br>© 2026 Global Talent Bridge
+</footer>
+
+<script>
+let language='en';
+function toggleLanguage(){
+ language=language==='en'?'ar':'en';
+ document.documentElement.lang=language;
+ document.documentElement.dir=language==='ar'?'rtl':'ltr';
+ document.querySelectorAll('[data-en]').forEach(el=>{
+ el.textContent=el.getAttribute('data-'+language);
+ });
+}
+</script>
+</body>
+</html>
