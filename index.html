@@ -102,8 +102,8 @@ Every journey starts with an opportunity
 data-ar="سواء كنت تبحث عن المواهب أو تريد تطوير قدراتك، مكانك معنا.">
 Whether you are looking for talent or hoping to develop your own abilities, you belong here.
 </p>
-<button class="primary" onclick="alert(language==='en'?'Registration will be available in a future version.':'سيكون التسجيل متاحاً في نسخة قادمة.')" data-en="I'm a talent" data-ar="أنا أبحث عن فرصة">I'm a talent</button>
-<button class="secondary" onclick="alert(language==='en'?'Institution registration will be available in a future version.':'تسجيل المؤسسات سيكون متاحاً في نسخة قادمة.')" data-en="I'm an organization" data-ar="أنا أمثل مؤسسة">I'm an organization</button>
+<button class="primary" onclick="window.location.href='register.html'" data-en="I'm a talent" data-ar="أنا أبحث عن فرصة">I'm a talent</button>
+<button class="secondary" onclick="alert(language==='en'?'Organization registration will be available in a future version.':'تسجيل المؤسسات سيكون متاحاً في نسخة قادمة.')" data-en="I'm an organization" data-ar="أنا أمثل مؤسسة">I'm an organization</button>
 </section>
 
 <footer>
@@ -116,12 +116,12 @@ data-ar="نربط الناس والمهارات والفرص حول العالم
 <script>
 let language='en';
 function toggleLanguage(){
- language=language==='en'?'ar':'en';
- document.documentElement.lang=language;
- document.documentElement.dir=language==='ar'?'rtl':'ltr';
- document.querySelectorAll('[data-en]').forEach(el=>{
- el.textContent=el.getAttribute('data-'+language);
- });
+language=language==='en'?'ar':'en';
+document.documentElement.lang=language;
+document.documentElement.dir=language==='ar'?'rtl':'ltr';
+document.querySelectorAll('[data-en]').forEach(el=>{
+el.textContent=el.getAttribute('data-'+language);
+});
 }
 </script>
 </body>
